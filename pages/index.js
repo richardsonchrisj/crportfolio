@@ -1,6 +1,7 @@
+import NextLink from "next/link";
 import { Container, Box, Heading } from "@chakra-ui/react";
 
-const Page = () => {
+const Home = () => {
   return (
     <Container>
       <Box borderRadius="lg" bg="red" mb={6} p={3} align="center">
@@ -20,4 +21,4 @@ const Page = () => {
     </Container>
   );
 };
-export default Page;
+export default Home;
