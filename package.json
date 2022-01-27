@@ -1,7 +1,7 @@
 {
   "name": "crportfolio",
   "version": "1.0.0",
-  "description": "Professional website for Chris Richardson, PhD",
+  "description": "Portfolio site for Chris Richardson, PhD",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
