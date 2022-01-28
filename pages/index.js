@@ -20,7 +20,7 @@ const Home = () => {
         borderRadius="lg"
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         mb={6}
-        mt={10}
+        mt={100}
         p={3}
         align="center"
       >

@@ -32,12 +32,12 @@ const LogoBox = styled.span`
   padding: 10px;
 
   &:hover img {
-    animation: ${spin} 1s ease-in-out infinite;
+    animation: ${spin} 2s ease-in-out 1;
   }
 `;
 
 const Logo = () => {
-  const logo = `/images/logo-dark.png`;
+  const logo = `/images/square.png`;
 
   return (
     <Link href="/">
@@ -45,8 +45,8 @@ const Logo = () => {
         <LogoBox>
           <Image
             src={logo}
-            width={256}
-            height={75}
+            width={70}
+            height={70}
             alt="BatChris and Rupert Logo"
           />
           <Text

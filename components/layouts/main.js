@@ -9,7 +9,7 @@ const Main = ({ children, router }) => {
         <title>Chris Richardson, PhD</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="container.md" pt={25}>
         {children}
       </Container>
     </Box>
