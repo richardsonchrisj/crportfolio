@@ -1,6 +1,7 @@
-import Head from "next/head";
-import Navbar from "../navbar";
-import { Box, Container } from "@chakra-ui/react";
+import Head from "next/head"
+import Navbar from "../navbar"
+import { Box, Container } from "@chakra-ui/react"
+import VoxelDog from "../voxel-dog"
 const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
@@ -10,10 +11,11 @@ const Main = ({ children, router }) => {
       </Head>
       <Navbar path={router.asPath} />
       <Container maxW="container.md" pt={25}>
+        <VoxelDog />
         {children}
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main
