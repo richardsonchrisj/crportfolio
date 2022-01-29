@@ -1,18 +1,24 @@
 import NextLink from "next/link"
 import {
-  Container,
-  Button,
   Box,
+  Button,
+  Container,
   Heading,
+  Icon,
   Image,
-  useColorModeValue,
   Link,
+  List,
+  ListItem,
+  SimpleGrid,
+  useColorModeValue,
 } from "@chakra-ui/react"
-import Section from "../components/section"
-import Paragraph from "../components/paragraph"
-import Layout from "../components/layouts/article"
 import { BioSection, BioYear } from "../components/bio"
 import { ChevronRightIcon } from "@chakra-ui/icons"
+import { GridItem } from "../components/grid-item"
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from "react-icons/io5"
+import Layout from "../components/layouts/article"
+import Paragraph from "../components/paragraph"
+import Section from "../components/section"
 
 const Home = () => {
   return (
@@ -131,6 +137,24 @@ const Home = () => {
             </Heading>
             <Paragraph>Art, Music</Paragraph>
           </Section>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/richardsonchrisj" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @richardsonchrisj
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
