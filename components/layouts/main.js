@@ -11,11 +11,10 @@ const Main = ({ children, router }) => {
         <title>Chris Richardson, PhD</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container maxW="container.md" pt={25}>
+      <Container maxW="container.md" pt={75}>
         <NoSsr>
           <VoxelDog />
         </NoSsr>
-
         {children}
       </Container>
     </Box>

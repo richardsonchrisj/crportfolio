@@ -1,26 +1,23 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Text, useColorModeValue } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import { jsx, css, keyframes } from "@emotion/react";
+import Link from "next/link"
+import Image from "next/image"
+import { Text, useColorModeValue } from "@chakra-ui/react"
+import styled from "@emotion/styled"
+import { jsx, css, keyframes } from "@emotion/react"
 
-const spin = keyframes`
+const bounce = keyframes`
   from, 20%, 53%, 80%, to {
     transform: translate3d(0,0,0);
   }
-
   40%, 43% {
     transform: translate3d(0, -30px, 0);
   }
-
   70% {
     transform: translate3d(0, -15px, 0);
   }
-
   90% {
     transform: translate3d(0,-4px,0);
   }
-`;
+`
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -32,12 +29,12 @@ const LogoBox = styled.span`
   padding: 10px;
 
   &:hover img {
-    animation: ${spin} 2s ease-in-out 1;
+    animation: ${bounce} 2s ease-in-out 1;
   }
-`;
+`
 
 const Logo = () => {
-  const logo = `/images/square.png`;
+  const logo = `/images/square.png`
 
   return (
     <Link href="/">
@@ -47,7 +44,7 @@ const Logo = () => {
             src={logo}
             width={70}
             height={70}
-            alt="BatChris and Rupert Logo"
+            alt="ChrisRichardson.Dev Logo"
           />
           <Text
             color={useColorModeValue("gray.800", "whiteAlpha.900")}
@@ -55,12 +52,12 @@ const Logo = () => {
             fontWeight="bold"
             ml={3}
           >
-            Chris Richardson, PhD
+            ChrisRichardson.Dev
           </Text>
         </LogoBox>
       </a>
     </Link>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

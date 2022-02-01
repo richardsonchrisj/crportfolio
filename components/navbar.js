@@ -1,6 +1,6 @@
-import reactDom from "react-dom";
-import Logo from "./logo";
-import NextLink from "next/link";
+import reactDom from "react-dom"
+import Logo from "./logo"
+import NextLink from "next/link"
 import {
   Container,
   Box,
@@ -14,13 +14,13 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-} from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import ThemeToggleButton from "./layouts/theme-toggle-button.js";
+} from "@chakra-ui/react"
+import { HamburgerIcon } from "@chakra-ui/icons"
+import ThemeToggleButton from "./layouts/theme-toggle-button.js"
 
 const LinkItem = ({ href, path, children }) => {
-  const active = path === href;
-  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
+  const active = path === href
+  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900")
   return (
     <NextLink href={href}>
       <Link
@@ -31,11 +31,11 @@ const LinkItem = ({ href, path, children }) => {
         {children}
       </Link>
     </NextLink>
-  );
-};
+  )
+}
 
 const Navbar = (props) => {
-  const { path } = props;
+  const { path } = props
   return (
     <Box
       position="fixed"
@@ -49,7 +49,7 @@ const Navbar = (props) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="container.lg"
         wrap="wrap"
         align="center"
         justify="space-between"
@@ -74,6 +74,9 @@ const Navbar = (props) => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
+          <LinkItem href="/code" path={path}>
+            Code
+          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -95,13 +98,16 @@ const Navbar = (props) => {
                 <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
+                <NextLink href="/code" passHref>
+                  <MenuItem as={Link}>Code</MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Box>
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
