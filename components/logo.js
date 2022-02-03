@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Text, useColorModeValue } from "@chakra-ui/react"
 import styled from "@emotion/styled"
-import { jsx, css, keyframes } from "@emotion/react"
+import { keyframes } from "@emotion/react"
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {

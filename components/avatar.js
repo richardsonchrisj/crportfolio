@@ -1,94 +1,135 @@
-import styled from "@emotion/styled";
+import { useState, useEffect, useRef, useCallback } from "react"
+import * as THREE from "three"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import { loadGLTFModel } from "../lib/model"
+import { AvatarSpinner, AvatarContainer } from "./avatar-loader"
 
-const Container = styled.div`
-      margin-top: 100px;
-      margin: auto;
-`;
-const Content = styled.div`
-       margin-top: 10px;
-       border: none;
-      width: 100%;
-       height: calc(100%);
-`;
-
+function easeOutCirc(x) {
+  return Math.sqrt(1 - Math.pow(x - 1, 4))
+}
 
 const Avatar = () => {
-      return (<>
-           
+  const refContainer = useRef()
+  const [loading, setLoading] = useState(true)
+  const [renderer, setRenderer] = useState()
+  const [_camera, setCamera] = useState()
+  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [initialCameraPosition] = useState(
+    new THREE.Vector3(
+      20 * Math.sin(0.2 * Math.PI),
+      10,
+      20 * Math.cos(0.2 * Math.PI)
+    )
+  )
+  const [scene] = useState(new THREE.Scene())
+  const [_controls, setControls] = useState()
 
-                        body {
-                              padding: 20 40;
-                        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-                        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-                        background-color: rgb(243, 243, 243);
-      }
+  const handleWindowResize = useCallback(() => {
+    const { current: container } = refContainer
+    if (container && renderer) {
+      const scW = container.clientWidth
+      const scH = container.clientHeight
 
-                        .warning {
-                              color: rgb(215, 0, 0);
-                        font-weight: bold;
-      }
-                  </style>
+      renderer.setSize(scW, scH)
+    }
+  }, [renderer])
 
-                  <script>
-      // Listen to messages from the iframe
-                        window.addEventListener('message', receiveMessage, false)
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    const { current: container } = refContainer
+    if (container && !renderer) {
+      const scW = container.clientWidth
+      const scH = container.clientHeight
 
-                        // Handle messages from the iframe
-                        function receiveMessage(event) {
-        // Check if the received message is a string and a glb url
-        // if not ignore it, and print details to the console
-        if (
-                        typeof event.data === 'string' &&
-                        event.data.startsWith('https://') &&
-                        event.data.endsWith('.glb')
-                        ) {
-          const url = event.data
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+      })
+      renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.setSize(scW, scH)
+      renderer.outputEncoding = THREE.sRGBEncoding
+      container.appendChild(renderer.domElement)
+      setRenderer(renderer)
 
-                        console.log(`Avatar URL: ${url}`)
+      // 640 -> 240
+      // 8   -> 6
+      const scale = scH * 0.005 + 4.8
+      const camera = new THREE.OrthographicCamera(
+        -scale,
+        scale,
+        scale,
+        -scale,
+        0.01,
+        50000
+      )
+      camera.position.copy(initialCameraPosition)
+      camera.lookAt(target)
+      setCamera(camera)
 
-                        document.getElementById('avatarUrl').innerHTML = `Avatar URL: ${url}`
-                        document.getElementById('iframe').hidden = true
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      scene.add(ambientLight)
+
+      const controls = new OrbitControls(camera, renderer.domElement)
+      controls.autoRotate = true
+      controls.target = target
+      setControls(controls)
+
+      loadGLTFModel(
+        scene,
+        "https://d1a370nemizbjq.cloudfront.net/a4d624aa-e0e8-4a7f-b871-c276a3554fdf.glb",
+        {
+          receiveShadow: false,
+          castShadow: false,
+        }
+      ).then(() => {
+        animate()
+        setLoading(false)
+      })
+
+      let req = null
+      let frame = 0
+      const animate = () => {
+        req = requestAnimationFrame(animate)
+
+        frame = frame <= 100 ? frame + 1 : frame
+
+        if (frame <= 100) {
+          const p = initialCameraPosition
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+
+          camera.position.y = 10
+          camera.position.x =
+            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+          camera.position.z =
+            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
+          camera.lookAt(target)
         } else {
-                              console.log(`Received message from unknown source: ${event.data}`)
-                        }
+          controls.update()
+        }
+
+        renderer.render(scene, camera)
       }
 
-                        function displayIframe() {
-                              document.getElementById('avatarUrl').innerHTML = 'Avatar URL:'
-        document.getElementById('iframe').hidden = false
+      return () => {
+        console.log("unmount")
+        cancelAnimationFrame(req)
+        renderer.dispose()
       }
-                  </script>
-            </head>
+    }
+  }, [])
 
-            <body>
-                  <h2>Ready Player Me iframe example</h2>
-                  <ul>
-                        <li>Click "Open Ready Player Me" button.</li>
-                        <li>Create an avatar.</li>
-                        <li>Click on "Done" button when you finish customizing your avatar.</li>
-                        <li>This page will receive the url when it is created.</li>
-                        <li>Url will be displayed, and Ready Player Me window will be closed.</li>
-                  </ul>
-                  <p class="warning">
-                        If you are a Ready Player Me partner, don't forget to replace 'demo' in
-                        the iframe source url with your partner subdomain.
-                  </p>
-                  <input
-                        type="button"
-                        value="Open Ready Player Me"
-                        onClick="displayIframe()"
-                  />
-                  <div id="avatarUrl"><b>Avatar URL: </b></div>
-                  <div class="container">
-                        <iframe
-                              id="iframe"
-                              class="content"
-                              allow="camera *; microphone *"
-                              src="https://demo.readyplayer.me/"
-                              hidden="true"
-                        ></iframe>
-                  </div>
-            </body>
-      </>)
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize, false)
+    return () => {
+      window.removeEventListener("resize", handleWindowResize, false)
+    }
+  }, [renderer, handleWindowResize])
+
+  return (
+    <AvatarContainer ref={refContainer}>
+      {loading && <AvatarSpinner />}
+    </AvatarContainer>
+  )
 }
+
 export default Avatar

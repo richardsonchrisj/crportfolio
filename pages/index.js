@@ -28,7 +28,6 @@ const Home = () => {
           borderRadius="lg"
           bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
           mb={6}
-          mt={100}
           p={3}
           align="center"
         >
@@ -64,6 +63,7 @@ const Home = () => {
             />
           </Box>
         </Box>
+
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
             Work
