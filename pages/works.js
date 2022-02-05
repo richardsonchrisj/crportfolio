@@ -18,41 +18,12 @@ const Works = () => {
               test stuff
             </WorkGridItem>
           </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
-          </Section>
+
           <Section delay={0.4}>
             <Divider my={6} />
             <Heading as="h3" fontSize={20} mb={10} mt={100}>
               Other Works
             </Heading>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="inkDrop" title="InkDrop" thumbnail={logo}>
-              test stuff
-            </WorkGridItem>
           </Section>
         </SimpleGrid>
       </Container>

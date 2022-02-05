@@ -24,17 +24,6 @@ const Home = () => {
   return (
     <Layout>
       <Container>
-        <Box
-          borderRadius="lg"
-          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-          mb={6}
-          p={3}
-          align="center"
-        >
-          Hello, I&apos;m an Instructional Designer and full-stack developer
-          based in San Diego!
-        </Box>
-
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
@@ -154,6 +143,32 @@ const Home = () => {
                 </Button>
               </Link>
             </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/inkdrop_app" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoTwitter} />}
+                >
+                  @inkdrop_app (English)
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link
+                href="https://instagram.com/ChrisRichardson.Dev"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  @ChrisRichardson.Dev
+                </Button>
+              </Link>
+            </ListItem>
           </List>
         </Section>
       </Container>
@@ -161,3 +176,4 @@ const Home = () => {
   )
 }
 export default Home
+export { getServerSideProps } from "../components/chakra"
