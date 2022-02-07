@@ -21,10 +21,10 @@ const Home = () => {
 
         <Section delay={0.1}>
           <Paragraph>
-            Hi, I'm Chris. I'm a Senior Instructional Designer and Web
+            Hi, I&apos;m Chris. I&apos;m a Senior Instructional Designer and Web
             Developer. For a decade, I taught Media and Cultural Studies at a
-            small liberal arts college outside Atlanta. Now, I'm based in San
-            Diego, where I help professionals learn and collaborate more
+            small liberal arts college outside Atlanta. Now, I&apos;m based in
+            San Diego, where I help professionals learn and collaborate more
             effectively through innovative, evidence-based design.
             <NextLink href="/portfolio/fiveReasons">
               <Link>Five Reasons to Write an Essay.</Link>
