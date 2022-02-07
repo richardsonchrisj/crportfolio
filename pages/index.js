@@ -5,6 +5,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import Paragraph from "../components/paragraph"
 import Section from "../components/section"
+import Chris from "../components/chris"
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
             </NextLink>
           </Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <NextLink href="/portfolio">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My Portfolio
               </Button>
@@ -38,6 +39,7 @@ const Home = () => {
           </Box>
 
           <Section delay={0.2}>
+            <Chris />
             <Heading as="h3" variant="section-title">
               Bio
             </Heading>
@@ -81,12 +83,6 @@ const Home = () => {
               <BioYear>2021</BioYear>
               Completed Professional Certificate in Coding, MIT
             </BioSection>
-          </Section>
-          <Section delay={0.3}>
-            <Heading as="h3" variant="section-title">
-              I ❤️
-            </Heading>
-            <Paragraph>Art, Music</Paragraph>
           </Section>
         </Section>
       </Container>

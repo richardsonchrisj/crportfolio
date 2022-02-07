@@ -1,6 +1,7 @@
 import AvatarView from "@sarge/avatar-view"
 
-const url = "/chris.glb"
+const url =
+  "https://d1a370nemizbjq.cloudfront.net/2c3a25d8-a3a4-4582-81e7-016842acb0ee.glb"
 
 const Chris = () => {
   return <AvatarView url={url} rotateAvatar eyeBlink headMovement />

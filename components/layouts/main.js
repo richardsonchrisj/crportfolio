@@ -4,9 +4,9 @@ import NavBar from "../navbar"
 import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
 import VoxelChrisLoader from "../voxel-chris-loader"
-import Chris from "../chris"
+import VoxelChris from "../voxel-chris"
 
-const LazyVoxelChris = dynamic(() => import("../chris"), {
+const LazyVoxelChris = dynamic(() => import("../voxel-chris"), {
   ssr: false,
   loading: () => <VoxelChrisLoader />,
 })

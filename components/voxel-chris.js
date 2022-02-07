@@ -74,7 +74,7 @@ const VoxelChris = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, "/chris.glb", {
+      loadGLTFModel(scene, "/cr.glb", {
         receiveShadow: false,
         castShadow: false,
       }).then(() => {
@@ -128,4 +128,4 @@ const VoxelChris = () => {
   )
 }
 
-export default VoxelDog
+export default VoxelChris
