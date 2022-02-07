@@ -21,6 +21,8 @@ const Layout = ({ children, title }) => (
       {title && (
         <Head>
           <title>{title} - Chris Richardson</title>
+          <meta name="twitter:title" content={title} />
+          <meta property="og:title" content={title} />
         </Head>
       )}
       {children}

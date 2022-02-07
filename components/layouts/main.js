@@ -4,7 +4,6 @@ import NavBar from "../navbar"
 import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
 import VoxelChrisLoader from "../voxel-chris-loader"
-import VoxelChris from "../voxel-chris"
 
 const LazyVoxelChris = dynamic(() => import("../voxel-chris"), {
   ssr: false,
@@ -27,12 +26,12 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Chris Richardson's Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-        <title>Chris Richardson - Homepage</title>
+        <title>Chris Richardson, PhD</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="container.lg" pt={14}>
         <div>
           <LazyVoxelChris />
         </div>
