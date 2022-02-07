@@ -8,6 +8,17 @@ const url =
 const Chris = () => {
   return (
     <Box display={{ md: "flex" }}>
+      <AvatarView
+        style={{
+          width: "400px",
+          height: "400px",
+          borderRadius: "100%",
+        }}
+        url={url}
+        rotateAvatar
+        eyeBlink
+        headMovement
+      />
       <Box flexGrow={1} my={3} p={1} textAlign="center">
         <AvatarView
           style={{
