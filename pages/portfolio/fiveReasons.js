@@ -11,8 +11,8 @@ const Work = () => (
         Five Reasons to Write an Essay <Badge>2021</Badge>
       </Title>
       <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $200k.
+        A video essay or written during COVID-19 to encourage critical thinking
+        among and instrinsict motivation for college students.
       </P>
       <List ml={4} my={4}>
         <ListItem>
@@ -22,22 +22,11 @@ const Work = () => (
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>Platform</Meta>
-          <span>Windows/macOS/Linux/iOS/Android</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Stack</Meta>
-          <span>NodeJS, Electron, React Native</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Blogpost</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
-            ho $5/mo <ExternalLinkIcon mx="2px" />
-          </Link>
+          <Meta>Tools</Meta>
+          <span>Adobe AfterEffects</span>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/fiveReasons.jpg" alt="Inkdrop" />
       <WorkImage src="/images/works/fiveReasons.jpg" alt="Inkdrop" />
     </Container>
   </Layout>

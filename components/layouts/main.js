@@ -6,7 +6,7 @@ import Footer from "../footer"
 import VoxelChrisLoader from "../voxel-chris-loader"
 import Chris from "../chris"
 
-const LazyVoxelChris = dynamic(() => import("../voxel-chris"), {
+const LazyVoxelChris = dynamic(() => import("../chris"), {
   ssr: false,
   loading: () => <VoxelChrisLoader />,
 })
@@ -34,7 +34,7 @@ const Main = ({ children, router }) => {
 
       <Container maxW="container.md" pt={14}>
         <div>
-          <Chris />
+          <LazyVoxelChris />
         </div>
 
         {children}
