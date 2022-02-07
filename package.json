@@ -19,7 +19,6 @@
     "@emotion/styled": "^11.6.0",
     "@sarge/avatar-view": "^0.2.12",
     "framer-motion": "^5.6.0",
-    "lint": "^0.7.0",
     "next": "^12.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,6 +26,7 @@
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.8",
     "prettier": "^2.5.1"
   }
