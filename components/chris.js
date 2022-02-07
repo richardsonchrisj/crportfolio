@@ -4,18 +4,7 @@ const url =
   "https://d1a370nemizbjq.cloudfront.net/2c3a25d8-a3a4-4582-81e7-016842acb0ee.glb"
 
 const Chris = () => {
-  return (
-    <AvatarView
-      style={{
-        width: "400px",
-        height: "400px",
-      }}
-      url={url}
-      rotateAvatar
-      eyeBlink
-      headMovement
-    />
-  )
+  return <AvatarView url={url} rotateAvatar eyeBlink headMovement />
 }
 
 export default Chris
