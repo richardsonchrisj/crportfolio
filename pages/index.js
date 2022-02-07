@@ -1,21 +1,7 @@
 import NextLink from "next/link"
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Icon,
-  Image,
-  Link,
-  List,
-  ListItem,
-  SimpleGrid,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Button, Container, Heading, Image, Link } from "@chakra-ui/react"
 import { BioSection, BioYear } from "../components/bio"
 import { ChevronRightIcon } from "@chakra-ui/icons"
-import { GridItem } from "../components/grid-item"
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from "react-icons/io5"
 import Layout from "../components/layouts/article"
 import Paragraph from "../components/paragraph"
 import Section from "../components/section"
@@ -29,42 +15,18 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Chris Richardson, PhD
             </Heading>
-            <p>
-              Instructional designer. Web developer. Writer. Recovering
-              academic.
-            </p>
-          </Box>
-          <Box
-            flexShrink={0}
-            mt={{ base: 4, md: 0 }}
-            ml={{ md: 6 }}
-            align="center"
-          >
-            <Image
-              borderColor="whiteAlpha.800"
-              borderWidth={2}
-              borderStyle="solid"
-              maxWidth="100px"
-              display="inline-block"
-              borderRadius="full"
-              src="/images/logo.jpg"
-              alt="Profile image"
-            />
           </Box>
         </Box>
 
         <Section delay={0.1}>
-          <Heading as="h3" variant="section-title">
-            Work
-          </Heading>
           <Paragraph>
             Hi, I'm Chris. I'm a Senior Instructional Designer and Web
             Developer. For a decade, I taught Media and Cultural Studies at a
             small liberal arts college outside Atlanta. Now, I'm based in San
             Diego, where I help professionals learn and collaborate more
             effectively through innovative, evidence-based design.
-            <NextLink href="/works/inkdrop">
-              <Link>InkDrop</Link>
+            <NextLink href="/portfolio/fiveReasons">
+              <Link>Five Reasons to Write an Essay.</Link>
             </NextLink>
           </Paragraph>
           <Box align="center" my={4}>
@@ -126,50 +88,6 @@ const Home = () => {
             </Heading>
             <Paragraph>Art, Music</Paragraph>
           </Section>
-        </Section>
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            On the web
-          </Heading>
-          <List>
-            <ListItem>
-              <Link href="https://github.com/richardsonchrisj" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<Icon as={IoLogoGithub} />}
-                >
-                  @richardsonchrisj
-                </Button>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="https://twitter.com/inkdrop_app" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<Icon as={IoLogoTwitter} />}
-                >
-                  @inkdrop_app (English)
-                </Button>
-              </Link>
-            </ListItem>
-
-            <ListItem>
-              <Link
-                href="https://instagram.com/ChrisRichardson.Dev"
-                target="_blank"
-              >
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<Icon as={IoLogoInstagram} />}
-                >
-                  @ChrisRichardson.Dev
-                </Button>
-              </Link>
-            </ListItem>
-          </List>
         </Section>
       </Container>
     </Layout>

@@ -22,6 +22,7 @@ const Chris = () => {
         />
       </Box>
       <Box
+        delay={0.5}
         flexShrink={0}
         textAlign="left"
         borderRadius="lg"
@@ -35,10 +36,11 @@ const Chris = () => {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
+              .pauseFor(2500)
               .typeString("Hi, I'm Chris.")
               .pauseFor(2500)
               .typeString(
-                "I'm a Senior Instructional Designer and Web Developer."
+                " I'm a Senior Instructional Designer and Web Developer."
               )
               .pauseFor(2500)
               .deleteAll()
