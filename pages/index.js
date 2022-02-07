@@ -13,6 +13,7 @@ const Home = () => {
       <Container>
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
+            <Chris />
             <Heading as="h2" variant="page-title">
               Chris Richardson, PhD
             </Heading>
@@ -39,7 +40,6 @@ const Home = () => {
           </Box>
 
           <Section delay={0.2}>
-            <Chris />
             <Heading as="h3" variant="section-title">
               Bio
             </Heading>

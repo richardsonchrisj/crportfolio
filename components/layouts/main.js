@@ -1,14 +1,8 @@
 import Head from "next/head"
-import dynamic from "next/dynamic"
+
 import NavBar from "../navbar"
 import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
-import VoxelChrisLoader from "../voxel-chris-loader"
-
-const LazyVoxelChris = dynamic(() => import("../voxel-chris"), {
-  ssr: false,
-  loading: () => <VoxelChrisLoader />,
-})
 
 const Main = ({ children, router }) => {
   return (
@@ -32,10 +26,6 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.lg" pt={14}>
-        <div>
-          <LazyVoxelChris />
-        </div>
-
         {children}
 
         <Footer />
