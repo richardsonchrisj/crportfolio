@@ -1,8 +1,10 @@
 import Head from "next/head"
-
+import Section from "../section"
 import NavBar from "../navbar"
 import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
+import Chris from "../chris"
+import AvatarFrame from "../avatar-frame"
 
 const Main = ({ children, router }) => {
   return (
@@ -26,8 +28,10 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.lg" pt={14}>
+        <AvatarFrame delay={0.1}>
+          <Chris />
+        </AvatarFrame>
         {children}
-
         <Footer />
       </Container>
     </Box>

@@ -5,15 +5,13 @@ import { ChevronRightIcon } from "@chakra-ui/icons"
 import Layout from "../components/layouts/article"
 import Paragraph from "../components/paragraph"
 import Section from "../components/section"
-import Chris from "../components/chris"
 
 const Home = () => {
   return (
     <Layout>
-      <Container>
+      <Container my={10}>
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
-            <Chris />
             <Heading as="h2" variant="page-title">
               Chris Richardson, PhD
             </Heading>
