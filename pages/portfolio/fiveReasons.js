@@ -10,24 +10,29 @@ const Work = () => (
       <Title>
         Five Reasons to Write an Essay <Badge>2021</Badge>
       </Title>
-      <P>
-        A video essay or written during COVID-19 to encourage critical thinking
-        among and instrinsict motivation for college students.
-      </P>
+
       <List ml={4} my={4}>
+        {" "}
+        <Link
+          href="https://www.youtube.com/watch?v=QWYv-y0K0W0"
+          target="_blank"
+        >
+          <WorkImage
+            src="/images/works/fiveReasons.jpg"
+            alt="Five Reasons to Write an Essay Cover"
+          />
+        </Link>
         <ListItem>
-          <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
-          </Link>
+          <Meta>Description</Meta>A video essay written during COVID-19 to
+          encourage critical thinking among and instrinsict motivation for
+          college students.
+          <br />
         </ListItem>
         <ListItem>
           <Meta>Tools</Meta>
           <span>Adobe AfterEffects</span>
         </ListItem>
       </List>
-
-      <WorkImage src="/images/works/fiveReasons.jpg" alt="Inkdrop" />
     </Container>
   </Layout>
 )

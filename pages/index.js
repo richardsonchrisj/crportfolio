@@ -20,7 +20,7 @@ const Home = () => {
 
         <Section delay={0.1}>
           <Paragraph>
-            Hi, I&apos;m Chris. I&apos;m a Senior Instructional Designer and Web
+            Hi, I&apos;m Chris. I&apos;m an Instructional Designer and Web
             Developer. For a decade, I taught Media and Cultural Studies at a
             small liberal arts college outside Atlanta. Now, I&apos;m based in
             San Diego, where I help professionals learn and collaborate more
@@ -31,7 +31,7 @@ const Home = () => {
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/portfolio">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
                 My Portfolio
               </Button>
             </NextLink>
