@@ -1,9 +1,15 @@
 import Head from "next/head"
+import dynamic from "next/dynamic"
 import NavBar from "../navbar"
 import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
-import Chris from "../chris"
+import ChrisLoader from "../chrisloader"
 import AvatarFrame from "../avatar-frame"
+
+const LazyChris = dynamic(() => import("../chris"), {
+  ssr: false,
+  loading: () => <ChrisLoader />,
+})
 
 const Main = ({ children, router }) => {
   return (
@@ -27,9 +33,7 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} />
 
       <Container maxW="container.lg" minH="100vh" pt={14}>
-        <AvatarFrame delay={0.1}>
-          <Chris />
-        </AvatarFrame>
+        <LazyChris />
         {children}
         <Footer />
       </Container>

@@ -21,7 +21,7 @@ const bounce = keyframes`
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   display: inline-flex;
   align-items: center;
   height: 75px;
@@ -48,7 +48,7 @@ const Logo = () => {
           />
           <Text
             color={useColorModeValue("gray.800", "whiteAlpha.900")}
-            fontFamily="M PLUS Rounded 1c"
+            fontFamily="Lato"
             fontWeight="bold"
             ml={3}
           >

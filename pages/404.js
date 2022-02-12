@@ -15,9 +15,10 @@ const NotFound = () => {
       <Divider my={6} />
       <Box my={6} align="center"></Box>
       <NextLink href="/">
-        <Button colorScheme="teal">Return to home</Button>
+        <Button colorScheme="pink">Return to home</Button>
       </NextLink>
     </Container>
   )
 }
 export default NotFound
+export { getInitialProps } from "../components/chakra"

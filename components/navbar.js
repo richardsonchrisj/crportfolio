@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import ThemeToggleButton from "./theme-toggle-button"
+import { IoLogoGithub } from "react-icons/io5"
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -24,7 +25,7 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        color={active ? "pink" : inactiveColor}
+        color={active ? "pink" : undefined}
         textDecoration={active ? "underline" : "none"}
         _target={_target}
         {...props}
@@ -69,11 +70,26 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
+          <LinkItem href="/bio" path={path}>
+            Bio
+          </LinkItem>{" "}
           <LinkItem href="/portfolio" path={path}>
             Portfolio
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            Press
+          </LinkItem>
+          <LinkItem
+            _target="_blank"
+            href="https://github.com/richardsonchrisj/"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
@@ -88,13 +104,16 @@ const Navbar = (props) => {
               ></MenuButton>
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                <NextLink href="/bio" passHref>
+                  <MenuItem as={Link}>Bio</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                <NextLink href="/portfolio" passHref>
+                  <MenuItem as={Link}>Portfolio</MenuItem>
+                </NextLink>
+                <NextLink href="/press" passHref>
+                  <MenuItem as={Link}>Press</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/richardsonchrisj">
                   View Source
