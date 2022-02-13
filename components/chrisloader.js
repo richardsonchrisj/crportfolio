@@ -15,7 +15,7 @@ export const ChrisSpinner = () => (
 export const ChrisContainer = forwardRef(({ children }, ref) => (
   <Box
     ref={ref}
-    className="voxel-chris"
+    className="ChrisContainer"
     m="auto"
     mt={["-20px", "-60px", "-120px"]}
     mb={["-40px", "-140px", "-200px"]}
