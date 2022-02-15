@@ -17,7 +17,7 @@ export const ChrisContainer = forwardRef(({ children }, ref) => (
     ref={ref}
     className="ChrisContainer"
     m="auto"
-    mt={["-20px", "-60px", "-120px"]}
+    mt={"20px"}
     mb={["-40px", "-140px", "-200px"]}
     w={[280, 480, 640]}
     h={[280, 480, 640]}
