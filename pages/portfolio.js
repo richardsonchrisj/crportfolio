@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider } from "@chakra-ui/react"
+import { Container, Heading, SimpleGrid, Divider, Link } from "@chakra-ui/react"
 import Section from "../components/section"
 import Layout from "../components/layouts/article"
 import { WorkGridItem } from "../components/grid-item"
@@ -10,7 +10,7 @@ const Portfolio = () => {
       <Container maxW="container.lg">
         <Section>
           <Heading as="h2" variant="page-title">
-            Portfolio{" "}
+            Portfolio
           </Heading>
         </Section>
 
@@ -41,3 +41,4 @@ const Portfolio = () => {
 }
 
 export default Portfolio
+export { getServerSideProps } from "../components/chakra"

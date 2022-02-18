@@ -1,13 +1,8 @@
-import NextLink from "next/link"
 import {
-  Box,
   Button,
   Container,
   Heading,
-  Image,
-  Link,
   List,
-  ListItem,
   Icon,
   SimpleGrid,
 } from "@chakra-ui/react"
@@ -41,18 +36,6 @@ const Home = () => {
             development models such as ADDIE, SAM, and Kirkpatrick&apos;s Levels
             of Education.
           </Paragraph>
-          <SimpleGrid columns={[1, 2, 2]} spacing={10} gap={6}>
-            <NextLink href="/portfolio">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
-                My Portfolio
-              </Button>
-            </NextLink>
-            <NextLink href="/connect">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
-                Connect
-              </Button>
-            </NextLink>
-          </SimpleGrid>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">

@@ -1,12 +1,23 @@
 import { BioSection, BioYear } from "../components/bio"
 import Layout from "../components/layouts/article"
-import { Container, Heading } from "@chakra-ui/react"
+import { Container, Heading, SimpleGrid, Link, Button } from "@chakra-ui/react"
 import Section from "../components/section"
+import { ChevronRightIcon } from "@chakra-ui/icons"
 
 const Bio = () => {
   return (
     <Layout>
-      <Container>
+      <Container maxW={"container.lg"}>
+        <SimpleGrid columns={[1, 2, 2]} spacing={10} gap={6}>
+          <Link
+            href="https://docs.google.com/document/d/1ohe4pXmRszgo4cuJO4zymv_qS7PedOwkGwcNsdhLGTU/export?format=pdf"
+            target="_blank"
+          >
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
+              Download Resume
+            </Button>
+          </Link>
+        </SimpleGrid>
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
             Bio
@@ -57,3 +68,4 @@ const Bio = () => {
   )
 }
 export default Bio
+export { getServerSideProps } from "../components/chakra"
