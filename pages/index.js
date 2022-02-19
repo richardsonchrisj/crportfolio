@@ -22,7 +22,7 @@ const Home = () => {
       <Container maxW="container.lg">
         <Section>
           <Heading as="h2" variant="page-title">
-            Chris Richardson, PhD
+            Intro
           </Heading>
         </Section>
         <Section delay={0.1}>

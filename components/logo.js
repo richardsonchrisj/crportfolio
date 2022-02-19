@@ -51,6 +51,7 @@ const Logo = () => {
             fontFamily="Lato"
             fontWeight="bold"
             ml={3}
+            fontSize={{ base: "24px", md: "40px", lg: "50px" }}
           >
             ChrisRichardson.Dev
           </Text>

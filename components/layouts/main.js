@@ -1,10 +1,11 @@
 import Head from "next/head"
 import dynamic from "next/dynamic"
 import NavBar from "../navbar"
-import { Box, Container } from "@chakra-ui/react"
+import { Box, Container, useColorModeValue, Text } from "@chakra-ui/react"
 import Footer from "../footer"
 import ChrisLoader from "../chrisloader"
-import AvatarFrame from "../avatar-frame"
+import Typewriter from "typewriter-effect"
+// import AvatarFrame from "../avatar-frame"
 
 const LazyChris = dynamic(() => import("../chris"), {
   ssr: false,
@@ -27,13 +28,49 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Chris Richardson's Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
+
         <title>Chris Richardson, PhD</title>
       </Head>
 
       <NavBar path={router.asPath} />
 
       <Container maxW="container.lg" minH="100vh" pt={14}>
-        <LazyChris />
+        <Box>
+          <Box
+            pos={"relative"}
+            ml="60%"
+            mt="50px"
+            maxW="400px"
+            bg={useColorModeValue("#ffffff40", "#202020380")}
+            borderRadius="lg"
+          >
+            <Text>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Hi! I'm Chris Richardson.")
+
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString(
+                      "Well, actually I'm Chris's avatar. And I'm still waiting for him to animate me..."
+                    )
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString(
+                      "You can drag me around holding the right mouse down or change the view by holding the left button. You can also resize me."
+                    )
+
+                    .start()
+                }}
+              />
+            </Text>
+          </Box>
+          <Box pos="relative" top={"-100px"}>
+            <LazyChris />
+          </Box>
+        </Box>
+
         {children}
         <Footer />
       </Container>
