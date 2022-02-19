@@ -14,6 +14,7 @@ import Paragraph from "../components/paragraph"
 import Section from "../components/section"
 import { GridItem } from "../components/grid-item"
 import NextLink from "next/link"
+import second from "../public/images/posts/2.png"
 import thumbFiveReasons from "../public/images/posts/fiveReasons.jpg"
 
 const Home = () => {
@@ -112,20 +113,11 @@ const Home = () => {
           </Heading>{" "}
           <SimpleGrid columns={[1, 2, 2]} gap={6}>
             <GridItem
-              title="Five Reasons to Write an Essay"
-              thumbnail={thumbFiveReasons}
-              href="https://www.youtube.com/watch?v=KKxhf50FIPI"
-            />{" "}
-            <GridItem
-              title="Five Reasons to Write an Essay"
-              thumbnail={thumbFiveReasons}
-              href="https://www.youtube.com/watch?v=KKxhf50FIPI"
-            />{" "}
-            <GridItem
-              title="Five Reasons to Write an Essay"
-              thumbnail={thumbFiveReasons}
-              href="https://www.youtube.com/watch?v=KKxhf50FIPI"
+              title="7 Habits of Highly Effective—and Ineffective—Academics"
+              thumbnail={second}
+              href="https://medium.com/@crichardsondev/7-habits-of-highly-effective-and-ineffective-academics-3dc85edc80f8"
             />
+
             <Section delay={0.4}>
               <Heading as="h3" fontSize={20} mb={10} mt={100}>
                 <NextLink href="/articles" passHref>
