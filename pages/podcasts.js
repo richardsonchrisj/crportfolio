@@ -1,12 +1,16 @@
-import { Container, Heading, SimpleGrid } from "@chakra-ui/react"
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  Center,
+  Text,
+  Link,
+} from "@chakra-ui/react"
 import Layout from "../components/layouts/article"
 import Section from "../components/section"
 import { GridItem } from "../components/grid-item"
 
-import thumbFiveReasons from "../public/images/posts/fiveReasons.jpg"
-import third from "../public/images/posts/3.png"
-import second from "../public/images/posts/2.png"
-import first from "../public/images/posts/1.png"
 import datachats from "../public/images/posts/datachats.jpg"
 
 // youtube
@@ -17,50 +21,56 @@ import pcul from "../public/images/posts/pcul.jpg"
 import pcul2 from "../public/images/posts/pcul2.jpg"
 import capstone from "../public/images/posts/capstone.jpg"
 
-const Posts = () => (
+const Podcasts = () => (
   <Layout title="Posts">
     <Container maxW="container.lg">
       <Section>
         <Heading as="h2" variant="page-title">
-          Articles, Videos, and Posts{" "}
+          Podcasts
         </Heading>
       </Section>
 
-      <Section delay={0.1}>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Popular Posts
-        </Heading>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="Five Reasons to Write an Essay"
-            thumbnail={thumbFiveReasons}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
-          />
-        </SimpleGrid>
-      </Section>
       <Section delay={0.2}>
         <Heading as="h3" fontSize={20} mb={4}>
-          Medium
+          <Divider my={6} />
+          Data Chats
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="Free and Essential Tools for Academic Escape Artists"
-            thumbnail={third}
-            href="https://medium.com/@crichardsondev/free-and-essential-tools-for-academic-escape-artists-bb3c2468aa54"
-          />
-
-          <GridItem
-            title="7 Habits of Highly Effective — and Ineffective — Academics"
-            thumbnail={second}
-            href="https://medium.com/@crichardsondev/7-habits-of-highly-effective-and-ineffective-academics-3dc85edc80f8"
-          />
-
-          <GridItem
-            title="College Professor: The Game"
-            thumbnail={first}
+            title="Data Storytelling: Ensure Your Insights Make an Impact"
+            thumbnail={datachats}
             href="https://medium.com/@crichardsondev/college-professor-the-game-ddfd6f560c9c"
           />
+          <GridItem
+            title="The Communication Skills Needed to Improve Data Projects"
+            thumbnail={datachats}
+            href="https://www.pragmaticinstitute.com/resources/podcasts/data/the-communication-skills-needed-to-improve-data-projects/"
+          />
+
+          <GridItem
+            title="Filling Skill Gaps Crucial to Success in Data Roles"
+            thumbnail={datachats}
+            href="https://medium.com/@crichardsondev/college-professor-the-game-ddfd6f560c9c"
+          />
+
+          <Center>
+            <Text fontSize="4xl">
+              <Link
+                href="https://medium.com/@crichardsondev"
+                isExternal
+                variant={"more"}
+              >
+                Read More
+              </Link>
+            </Text>
+          </Center>
         </SimpleGrid>
+        <Section delay={0.4}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={20} mb={10} mt={100}>
+            Video
+          </Heading>
+        </Section>
       </Section>
       <Section delay={0.3}>
         <Heading as="h3" fontSize={20} mb={4}>
@@ -136,5 +146,5 @@ const Posts = () => (
   </Layout>
 )
 
-export default Posts
+export default Podcasts
 export { getServerSideProps } from "../components/chakra"

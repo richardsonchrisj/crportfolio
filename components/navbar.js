@@ -25,7 +25,6 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        color={active ? "pink" : undefined}
         textDecoration={active ? "underline" : "none"}
         _target={_target}
         {...props}
@@ -76,8 +75,11 @@ const Navbar = (props) => {
           <LinkItem href="/portfolio" path={path}>
             Portfolio
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Press
+          <LinkItem href="/articles" path={path}>
+            Articles
+          </LinkItem>
+          <LinkItem href="/podcasts" path={path}>
+            Podcasts
           </LinkItem>
           <LinkItem
             _target="_blank"
@@ -112,8 +114,11 @@ const Navbar = (props) => {
                 <NextLink href="/portfolio" passHref>
                   <MenuItem as={Link}>Portfolio</MenuItem>
                 </NextLink>
-                <NextLink href="/press" passHref>
-                  <MenuItem as={Link}>Press</MenuItem>
+                <NextLink href="/articles" passHref>
+                  <MenuItem as={Link}>Articles</MenuItem>
+                </NextLink>
+                <NextLink href="/podcasts" passHref>
+                  <MenuItem as={Link}>Podcasts</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/richardsonchrisj">
                   View Source

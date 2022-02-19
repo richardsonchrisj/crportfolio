@@ -21,7 +21,7 @@ const bounce = keyframes`
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   display: inline-flex;
   align-items: center;
   height: 75px;

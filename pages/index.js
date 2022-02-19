@@ -3,6 +3,7 @@ import {
   Container,
   Heading,
   List,
+  Link,
   Icon,
   SimpleGrid,
 } from "@chakra-ui/react"
@@ -12,6 +13,7 @@ import Layout from "../components/layouts/article"
 import Paragraph from "../components/paragraph"
 import Section from "../components/section"
 import { GridItem } from "../components/grid-item"
+import NextLink from "next/link"
 import thumbFiveReasons from "../public/images/posts/fiveReasons.jpg"
 
 const Home = () => {
@@ -39,7 +41,7 @@ const Home = () => {
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Key skills
+            Skills
           </Heading>
           <List>
             <span>
@@ -62,14 +64,28 @@ const Home = () => {
                 colorScheme="pink"
                 leftIcon={<Icon as={ChevronRightIcon} />}
               >
-                Data Analyis
+                Curriculum Development{" "}
               </Button>
               <Button
                 variant="ghost"
                 colorScheme="pink"
                 leftIcon={<Icon as={ChevronRightIcon} />}
               >
-                Digital Storytelling
+                Data Analysis
+              </Button>
+              <Button
+                variant="ghost"
+                colorScheme="pink"
+                leftIcon={<Icon as={ChevronRightIcon} />}
+              >
+                Data Visualization
+              </Button>
+              <Button
+                variant="ghost"
+                colorScheme="pink"
+                leftIcon={<Icon as={ChevronRightIcon} />}
+              >
+                Design Thinking
               </Button>
 
               <Button
@@ -85,14 +101,6 @@ const Home = () => {
                 colorScheme="pink"
                 leftIcon={<Icon as={ChevronRightIcon} />}
               >
-                Design for Deeper Learning
-              </Button>
-
-              <Button
-                variant="ghost"
-                colorScheme="pink"
-                leftIcon={<Icon as={ChevronRightIcon} />}
-              >
                 Web Design
               </Button>
             </span>
@@ -100,7 +108,7 @@ const Home = () => {
         </Section>{" "}
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Top posts
+            Posts
           </Heading>{" "}
           <SimpleGrid columns={[1, 2, 2]} gap={6}>
             <GridItem
@@ -118,6 +126,13 @@ const Home = () => {
               thumbnail={thumbFiveReasons}
               href="https://www.youtube.com/watch?v=KKxhf50FIPI"
             />
+            <Section delay={0.4}>
+              <Heading as="h3" fontSize={20} mb={10} mt={100}>
+                <NextLink href="/articles" passHref>
+                  See More...
+                </NextLink>
+              </Heading>
+            </Section>
           </SimpleGrid>
         </Section>
       </Container>
