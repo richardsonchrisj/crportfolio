@@ -37,9 +37,10 @@ const Main = ({ children, router }) => {
       <Container maxW="container.lg" minH="100vh" pt={14}>
         <Box>
           <Box
-            pos={"relative"}
-            ml="60%"
-            mt="50px"
+            pos={"absolute"}
+            m="50px"
+            ml="50%"
+            p="5px"
             maxW="400px"
             bg={useColorModeValue("#ffffff40", "#202020380")}
             borderRadius="lg"
@@ -66,7 +67,7 @@ const Main = ({ children, router }) => {
               />
             </Text>
           </Box>
-          <Box pos="relative" top={"-100px"}>
+          <Box zIndex={"500"}>
             <LazyChris />
           </Box>
         </Box>
