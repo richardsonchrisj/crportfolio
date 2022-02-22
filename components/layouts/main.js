@@ -1,10 +1,10 @@
 import Head from "next/head"
 import dynamic from "next/dynamic"
 import NavBar from "../navbar"
-import { Box, Container, useColorModeValue, Text } from "@chakra-ui/react"
+import { Box, Container } from "@chakra-ui/react"
 import Footer from "../footer"
 import ChrisLoader from "../chrisloader"
-import Typewriter from "typewriter-effect"
+import Bubble from "../bubble"
 // import AvatarFrame from "../avatar-frame"
 
 const LazyChris = dynamic(() => import("../chris"), {
@@ -36,45 +36,8 @@ const Main = ({ children, router }) => {
 
       <Container maxW="container.lg" minH="100vh" pt={14}>
         <Box>
-          <Box
-            pos={"absolute"}
-            m="50px"
-            ml="50%"
-            p="5px"
-            maxW="400px"
-            bg={useColorModeValue("#ffffff40", "#202020380")}
-            borderRadius="lg"
-          >
-            <Text>
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter
-                    .pauseFor(2500)
-                    .typeString("Hi! I'm Chris.")
-
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString("Well, actually I'm Chris's avatar.")
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString(
-                      "You can drag me around holding the right mouse button."
-                    )
-
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString(
-                      "Or you can change the camera by holding the left button."
-                    )
-                    .pauseFor(2500)
-                    .deleteAll()
-
-                    .start()
-                }}
-              />
-            </Text>
-          </Box>
-          <Box zIndex={"500"}>
+          <Bubble />
+          <Box>
             <LazyChris />
           </Box>
         </Box>

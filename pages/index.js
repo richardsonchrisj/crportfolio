@@ -3,7 +3,6 @@ import {
   Container,
   Heading,
   List,
-  Link,
   Icon,
   SimpleGrid,
 } from "@chakra-ui/react"
@@ -15,7 +14,6 @@ import Section from "../components/section"
 import { GridItem } from "../components/grid-item"
 import NextLink from "next/link"
 import second from "../public/images/posts/2.png"
-import thumbFiveReasons from "../public/images/posts/fiveReasons.jpg"
 
 const Home = () => {
   return (

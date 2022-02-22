@@ -16,7 +16,7 @@ const Chris = () => {
   const [target] = useState(new THREE.Vector3(0, 0.5, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
+      5 * Math.sin(0.2 * Math.PI),
       10,
       20 * Math.cos(0.2 * Math.PI)
     )
@@ -51,9 +51,6 @@ const Chris = () => {
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
-      // 640 -> 240
-      // 8   -> 6
-
       const camera = new THREE.PerspectiveCamera(10, scW / scH, 1, 1000)
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -63,14 +60,10 @@ const Chris = () => {
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
-      controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, "/cr.glb", {
-        receiveShadow: false,
-        castShadow: false,
-      }).then(() => {
+      loadGLTFModel(scene, "/cr.glb", {}).then(() => {
         animate()
         setLoading(false)
       })
