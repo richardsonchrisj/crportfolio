@@ -16,15 +16,6 @@ import { GridItem } from "../components/grid-item"
 import third from "../public/images/posts/3.png"
 import second from "../public/images/posts/2.png"
 import first from "../public/images/posts/1.png"
-import datachats from "../public/images/posts/datachats.jpg"
-
-// youtube
-import intro from "../public/images/posts/intro.jpg"
-import fyf from "../public/images/posts/fyf.jpg"
-import grm from "../public/images/posts/grm.jpg"
-import pcul from "../public/images/posts/pcul.jpg"
-import pcul2 from "../public/images/posts/pcul2.jpg"
-import capstone from "../public/images/posts/capstone.jpg"
 
 const Articles = () => (
   <Layout title="Posts">

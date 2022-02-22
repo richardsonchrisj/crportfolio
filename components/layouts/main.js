@@ -49,18 +49,25 @@ const Main = ({ children, router }) => {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Hi! I'm Chris Richardson.")
+                    .pauseFor(2500)
+                    .typeString("Hi! I'm Chris.")
+
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString("Well, actually I'm Chris's avatar.")
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .typeString(
+                      "You can drag me around holding the right mouse button."
+                    )
 
                     .pauseFor(2500)
                     .deleteAll()
                     .typeString(
-                      "Well, actually I'm Chris's avatar. And I'm still waiting for him to animate me..."
+                      "Or you can change the camera by holding the left button."
                     )
                     .pauseFor(2500)
                     .deleteAll()
-                    .typeString(
-                      "You can drag me around holding the right mouse down or change the view by holding the left button. You can also resize me."
-                    )
 
                     .start()
                 }}
