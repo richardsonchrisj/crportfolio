@@ -7,10 +7,11 @@ const Bubble = () => {
   return (
     <Box
       pos="relative"
+      boxShadow="md"
       zIndex={2}
       m={5}
       mt={"5%"}
-      ml={"60%"}
+      ml={["2%", "10%", "60%"]}
       p={4}
       w="30%"
       minH={"5%"}
