@@ -37,7 +37,7 @@ const Main = ({ children, router }) => {
       <Container maxW="container.lg" minH="100vh" pt={14}>
         <Box>
           <Bubble />
-          <Box>
+          <Box mt={-100}>
             <LazyChris />
           </Box>
         </Box>

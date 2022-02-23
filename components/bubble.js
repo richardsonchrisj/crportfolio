@@ -6,7 +6,7 @@ const Bubble = () => {
 
   return (
     <Box
-      pos="fixed"
+      pos="relative"
       zIndex={2}
       m={5}
       mt={"5%"}
@@ -17,34 +17,32 @@ const Bubble = () => {
       bg={useColorModeValue("#ffffff40", "#ffffff40")}
       borderRadius="50"
     >
-      <Text>
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .pauseFor(2500)
-              .typeString("Hi! I'm Chris.")
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .pauseFor(2500)
+            .typeString("Hi! I'm Chris.")
 
-              .pauseFor(2500)
-              .deleteAll()
-              .typeString("Well, actually I'm Chris's avatar.")
-              .pauseFor(2500)
-              .deleteAll()
-              .typeString(
-                "You can drag me around holding the right mouse button."
-              )
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString("Well, actually I'm Chris's avatar.")
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString(
+              "You can drag me around holding the right mouse button."
+            )
 
-              .pauseFor(2500)
-              .deleteAll()
-              .typeString(
-                "Or you can change the camera by holding the left button."
-              )
-              .pauseFor(2500)
-              .deleteAll()
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString(
+              "Or you can change the camera by holding the left button."
+            )
+            .pauseFor(2500)
+            .deleteAll()
 
-              .start()
-          }}
-        />
-      </Text>
+            .start()
+        }}
+      />
     </Box>
   )
 }
