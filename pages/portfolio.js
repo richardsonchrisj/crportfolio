@@ -2,7 +2,7 @@ import { Container, Heading, SimpleGrid, Divider, Link } from "@chakra-ui/react"
 import Section from "../components/section"
 import Layout from "../components/layouts/article"
 import { WorkGridItem } from "../components/grid-item"
-import fiveReasons from "../public/images/posts/fiveReasons.jpg"
+import fiveReasons from "../public/images/works/fiveReasons.jpg"
 
 const Portfolio = () => {
   return (

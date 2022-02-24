@@ -1,8 +1,7 @@
 import { Container, Badge, Link, List, ListItem } from "@chakra-ui/react"
-import { ExternalLinkIcon } from "@chakra-ui/icons"
 import { Title, WorkImage, Meta } from "../../components/work"
-import P from "../../components/paragraph"
 import Layout from "../../components/layouts/article"
+import fiveReasons from "../../public/images/works/fiveReasons.jpg"
 
 const Work = () => (
   <Layout title="fiveReasons">
@@ -18,7 +17,7 @@ const Work = () => (
           target="_blank"
         >
           <WorkImage
-            src="/images/works/fiveReasons.jpg"
+            src="../../images/works/fiveReasons.jpg"
             alt="Five Reasons to Write an Essay Cover"
           />
         </Link>
