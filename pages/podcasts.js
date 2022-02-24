@@ -32,7 +32,7 @@ const Podcasts = () => (
           <GridItem
             title="Data Storytelling: Ensure Your Insights Make an Impact"
             thumbnail={datachats}
-            href="https://medium.com/@crichardsondev/college-professor-the-game-ddfd6f560c9c"
+            href="https://www.pragmaticinstitute.com/resources/podcasts/data-storytelling-ensure-your-insights-make-an-impact/"
           />
           <GridItem
             title="The Communication Skills Needed to Improve Data Projects"
@@ -43,13 +43,13 @@ const Podcasts = () => (
           <GridItem
             title="Filling Skill Gaps Crucial to Success in Data Roles"
             thumbnail={datachats}
-            href="https://medium.com/@crichardsondev/college-professor-the-game-ddfd6f560c9c"
+            href="https://www.pragmaticinstitute.com/resources/podcasts/data/filling-skill-gaps-crucial-to-success-in-data-roles/"
           />
 
           <Center>
             <Text fontSize="4xl">
               <Link
-                href="https://medium.com/@crichardsondev"
+                href="https://podcasts.apple.com/us/podcast/data-chats-podcast/id1507005455"
                 isExternal
                 variant={"more"}
               >
@@ -66,20 +66,20 @@ const Podcasts = () => (
         </Heading>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="Pulitzer Prize-winning author Heather Ann Thompson on Blood in the Water"
+            title="Heather Ann Thompson discusses her Pulitzer Prize-winning book Blood in the Water: The Attica Prison Uprising of 1971 and its Legacy "
             thumbnail={tinap}
             href="https://www.tinapp.org/episodes/bloodinthewater"
           />
           <GridItem
-            title="The Communication Skills Needed to Improve Data Projects"
+            title="Scott Newstok discusses his book How to Think Like Shakespeare: Lessons from A Renaissance Education "
             thumbnail={tinap}
-            href="https://www.pragmaticinstitute.com/resources/podcasts/data/the-communication-skills-needed-to-improve-data-projects/"
+            href="https://www.tinapp.org/episodes/howtothink"
           />
 
           <GridItem
-            title="Filling Skill Gaps Crucial to Success in Data Roles"
+            title="Arthur I. Miller discusses his book The Artist in the Machine: The World of AI-Powered Creativity"
             thumbnail={tinap}
-            href="https://medium.com/@crichardsondev/college-professor-the-game-ddfd6f560c9c"
+            href="https://www.tinapp.org/episodes/artistinthemachine"
           />
 
           <Center>

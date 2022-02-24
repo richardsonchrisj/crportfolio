@@ -35,7 +35,8 @@ const Home = () => {
             I&apos;m an expert in evidence-based adult learning principles,
             learning theories, instructional design methodologies, and
             development models such as ADDIE, SAM, and Kirkpatrick&apos;s Levels
-            of Education.
+            of Education. Please reach out if there&apos;s a project we can
+            collaborate on!
           </Paragraph>
         </Section>
         <Section delay={0.3}>
@@ -51,6 +52,7 @@ const Home = () => {
               >
                 Adult Learning Theory
               </Button>
+
               <Button
                 variant="ghost"
                 colorScheme="pink"
