@@ -1,10 +1,9 @@
 import { Container, Badge, Link, List, ListItem } from "@chakra-ui/react"
 import { Title, WorkImage, Meta } from "../../components/work"
 import Layout from "../../components/layouts/article"
-import fiveReasons from "../../public/images/works/fiveReasons.jpg"
 
-const Work = () => (
-  <Layout title="fiveReasons">
+const FiveReasons = () => (
+  <Layout title="Five Reasons">
     <Container>
       <Title>
         Five Reasons to Write an Essay <Badge>2021</Badge>
@@ -36,5 +35,5 @@ const Work = () => (
   </Layout>
 )
 
-export default Work
+export default FiveReasons
 export { getServerSideProps } from "../../components/chakra"

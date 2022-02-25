@@ -3,6 +3,7 @@ import Section from "../components/section"
 import Layout from "../components/layouts/article"
 import { WorkGridItem } from "../components/grid-item"
 import fiveReasons from "../public/images/works/fiveReasons.jpg"
+import threeQuestions from "../public/images/works/threeQuestions.png"
 
 const Portfolio = () => {
   return (
@@ -15,6 +16,19 @@ const Portfolio = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section delay={0.2}>
+            <Divider my={6} />
+            <Heading as="h3" fontSize={20} mb={10} mt={100}>
+              Interactive Media
+            </Heading>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="threeQuestions"
+              title="Three Questions"
+              thumbnail={threeQuestions}
+            ></WorkGridItem>
+          </Section>
           <Section delay={0.4}>
             <Divider my={6} />
             <Heading as="h3" fontSize={20} mb={10} mt={100}>
