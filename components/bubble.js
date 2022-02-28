@@ -13,7 +13,7 @@ const Bubble = () => {
       mt={"5%"}
       ml={["2%", "10%", "60%"]}
       p={4}
-      w={["50%", "40%", "40%"]}
+      w={"40%"}
       minH={"5%"}
       bg={useColorModeValue("#ffffff40", "#ffffff40")}
       borderRadius="50"

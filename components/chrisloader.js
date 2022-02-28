@@ -19,7 +19,7 @@ export const ChrisContainer = forwardRef(({ children }, ref) => (
     m="auto"
     mt={"20px"}
     mb={["-40px", "-140px", "-200px"]}
-    w={[640, 768, 1024]}
+    w={[320, 768, 1024]}
     h={[320, 384, 512]}
     position="relative"
   >

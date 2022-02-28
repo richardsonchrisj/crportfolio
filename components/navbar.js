@@ -78,6 +78,9 @@ const Navbar = (props) => {
           <LinkItem href="/podcasts" path={path}>
             Podcasts
           </LinkItem>
+          <LinkItem href="/portfolio" path={path}>
+            Portfolio
+          </LinkItem>
           <LinkItem
             _target="_blank"
             href="https://github.com/richardsonchrisj/"
@@ -114,6 +117,9 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="/podcasts" passHref>
                   <MenuItem as={Link}>Podcasts</MenuItem>
+                </NextLink>
+                <NextLink href="/portfolio" passHref>
+                  <MenuItem as={Link}>Portfolio</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/richardsonchrisj">
                   View Source

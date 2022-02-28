@@ -121,7 +121,7 @@ const Home = () => {
             <Section delay={0.4}>
               <Heading as="h3" fontSize={20} mb={10} mt={100}>
                 <NextLink href="/articles" passHref>
-                  See More...
+                  Read More...
                 </NextLink>
               </Heading>
             </Section>

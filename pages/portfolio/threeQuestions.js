@@ -35,7 +35,7 @@ const Work = () => (
           <span>
             1. Identify one&apos;s tendency toward analytical or intuitive
             thinking; 2. Assess how one&apos;s tendency could affect
-            communication with others{" "}
+            communication with others.
           </span>
         </ListItem>
         <ListItem>
