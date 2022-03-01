@@ -21,22 +21,23 @@ const Home = () => {
       <Container maxW="container.lg">
         <Section>
           <Heading as="h2" variant="page-title">
-            Intro
+            Welcome
           </Heading>
         </Section>
         <Section delay={0.1}>
           <Paragraph>
             Hi, I&apos;m Chris. I&apos;m an award-winning instructional designer
-            with more than a decade of professional experience. I&apos;m
-            passionate about fostering meaningful collaboration and effective
-            learning through cutting-edge technologies and digital innovation.
-            I&apos;ve created many online, hybrid, and in-person courses that
-            promote engagement and retention. They&apos;re also hella fun.
-            I&apos;m an expert in evidence-based adult learning principles,
-            learning theories, instructional design methodologies, and
-            development models such as ADDIE, SAM, and Kirkpatrick&apos;s Levels
-            of Education. Please reach out if there&apos;s a project we can
-            collaborate on!
+            with more than a decade of professional experience. I bring clarity
+            to complexity through meaningful learning experiences. I&apos;m
+            passionate about cutting-edge technologies and digital innovation in
+            education. I&apos;ve created many online, hybrid, and in-person
+            courses that promote engagement and retention. They&apos;re also
+            hella fun. I&apos;m an expert in evidence-based adult learning
+            principles, learning theories, instructional design methodologies,
+            and development models such as ADDIE, SAM, and Kirkpatrick&apos;s
+            Levels of Education. I also love to develop web applications and
+            unique digital solutions. Please reach out if there&apos;s a project
+            we can collaborate on!
           </Paragraph>
         </Section>
         <Section delay={0.3}>
