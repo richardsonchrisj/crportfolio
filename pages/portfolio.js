@@ -5,6 +5,7 @@ import { WorkGridItem } from "../components/grid-item"
 import fiveReasons from "../public/images/works/fiveReasons.jpg"
 import threeQuestions from "../public/images/works/threeQuestions.png"
 import quizwithhints from "../public/images/works/frenchQuiz.png"
+import shakespeare from "../public/images/works/shakespeareQuiz.png"
 
 const Portfolio = () => {
   return (
@@ -26,14 +27,21 @@ const Portfolio = () => {
           <Section>
             <WorkGridItem
               id="threeQuestions"
-              title="Three Questions"
+              title="Three Questions: An Articulate Storyline project"
               thumbnail={threeQuestions}
             ></WorkGridItem>
           </Section>
           <Section>
             <WorkGridItem
+              id="somewhereShakespeare"
+              title="Somewhere Shakespeare: An HTML quiz with Google Maps API"
+              thumbnail={shakespeare}
+            ></WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
               id="quizwithhints"
-              title="Quiz with hints"
+              title="French Quiz: A JavaScript multiple-choice web app with a hinting doggy sidekick for review"
               thumbnail={quizwithhints}
             ></WorkGridItem>
           </Section>
@@ -46,7 +54,7 @@ const Portfolio = () => {
           <Section>
             <WorkGridItem
               id="fiveReasons"
-              title="Five Reasons to Write an Essay"
+              title="Five Reasons to Write an Essay: A Video made with Adobe AfterEffects"
               thumbnail={fiveReasons}
             ></WorkGridItem>
           </Section>

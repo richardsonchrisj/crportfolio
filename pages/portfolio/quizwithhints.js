@@ -6,7 +6,7 @@ const Work = () => (
   <Layout title="Language Quiz with helpful hints">
     <Container maxW="container.lg" p={10}>
       <Title>
-        Language Quiz with helpful hints <Badge>2020</Badge>
+        Language quiz with helpful hints <Badge>2020</Badge>
       </Title>
 
       <List ml={4} my={4}>
@@ -18,8 +18,8 @@ const Work = () => (
           />
         </Link>
         <ListItem>
-          <Meta>Activity</Meta>A quiz application that provides a helping hand
-          with a friendly tail wag.
+          <Meta>Activity</Meta>A quiz application that provides a helpful tail
+          wag.
           <br />
         </ListItem>
         <ListItem>
