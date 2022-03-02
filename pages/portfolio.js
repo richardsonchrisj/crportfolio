@@ -4,6 +4,7 @@ import Layout from "../components/layouts/article"
 import { WorkGridItem } from "../components/grid-item"
 import fiveReasons from "../public/images/works/fiveReasons.jpg"
 import threeQuestions from "../public/images/works/threeQuestions.png"
+import quizwithhints from "../public/images/works/frenchQuiz.png"
 
 const Portfolio = () => {
   return (
@@ -27,6 +28,13 @@ const Portfolio = () => {
               id="threeQuestions"
               title="Three Questions"
               thumbnail={threeQuestions}
+            ></WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="quizwithhints"
+              title="Quiz with hints"
+              thumbnail={quizwithhints}
             ></WorkGridItem>
           </Section>
           <Section delay={0.4}>
