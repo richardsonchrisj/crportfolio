@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* The Basics */
+body {
+  animation: ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+#map {
+  min-height: 200px;
+  width: 100%;
+}
+
+#worldMap {
+  min-height: 300px;
+  width: 100%;
+}
+
+#congratsImage {
+  min-height: 300px;
+}
+
+#shakeImage {
+  max-height: 50vh;
+}
+
+.fa-10x:hover {
+  transform: scale(1.5) rotate(5deg);
+  margin: 3rem;
+}
+
+.btn {
+  margin-top: 1rem;
+}

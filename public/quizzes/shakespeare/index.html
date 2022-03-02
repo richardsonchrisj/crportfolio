@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Somewhere Shakespeare</title>
+  <!-- stylsheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a1d44eeb03.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container p-5">
+    <div class="row h-100">
+      <div class="col-sm-12 my-auto">
+        <h1 id="mainText" class="text-center">SOMEWHERE SHAKESPEARE</h1>
+        <p id="introText" class="text-center">
+          In this quiz, you'll need to answer where the Bard is located. Think Where's Waldo, but more highbrow!
+        </p>
+        <div id=mainImage class="text-center">
+          <figure class="figure">
+            <img class="img-fluid rounded mx-auto d-block" src="img/shakespeare.jpg" id="shakeImage">
+            <figcaption class="figure-caption text-right" id="caption">William Shakespeare, 1564 - 1616.</figcaption>
+          </figure>
+        </div>
+        <div class="text-center" id="icon"></div>
+        <div class="form-group" id="questionForm">
+
+          <textarea id="answerBox" style="display: none" class="form-control" rows="3" required></textarea>
+
+          <div id="buttons" class="d-flex align-items-end"><button id="askButton" type="submit"
+              class="btn btn-outline-danger btn-block"
+              onclick="testSubmission(document.getElementById('answerBox').value);" style="display: none">
+              Submit Answer
+            </button>
+            <button id="cheatButton" type="submit" class="btn btn-outline-danger" onclick="cheat();"
+              style="display: none">
+              Cheat
+            </button>
+          </div>
+
+
+          <div class="text-center">
+            <button id="firstButton" type="button" class="btn btn-outline-danger" onclick="ask()">
+              Click to begin
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center" id="questionNumber" style="display: none">
+
+        </div>
+
+        <!-- modal for correct answers -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="congratsTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h1 class="modal-title" id="congratsTitle"></h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div id="congratsText"></div>
+                <br>
+
+                <div id="map"></div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="nextQuestionButton"
+                  onclick="nextQuestion()">
+                  continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for final -->
+        <div class="modal fade" id="lastModal" tabindex="-1" role="dialog" aria-labelledby="congratsTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h1 class="modal-title" id="finalTitle">One last question...</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div id="finalText">You've traced much of the geography of Shakespeare and his plays. Where do you
+                  think the next great writers will set their work?</div>
+                <br>
+                <div id="worldMap"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7fzXEAYfpdjXYhh_7nGdKdV166t93ksA&callback=initMap&libraries=&v=weekly">
+          defer
+        </script>
+</body>
+
+</html>
