@@ -34,14 +34,15 @@ const Portfolio = () => {
           <Section>
             <WorkGridItem
               id="somewhereShakespeare"
-              title="Somewhere Shakespeare: An HTML quiz with Google Maps API"
+              title="Somewhere Shakespeare: A JavaScript text-based web app with Google Maps API"
               thumbnail={shakespeare}
             ></WorkGridItem>
           </Section>
           <Section>
             <WorkGridItem
               id="quizwithhints"
-              title="French Quiz: A JavaScript multiple-choice web app with a hinting doggy sidekick for review"
+              title="French Quiz: A JavaScript multiple-choice web app that provides a helpful tail
+              wag."
               thumbnail={quizwithhints}
             ></WorkGridItem>
           </Section>

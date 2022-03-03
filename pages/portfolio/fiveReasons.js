@@ -26,24 +26,26 @@ const FiveReasons = () => (
         </ListItem>
         <ListItem>
           <Meta>Learning Objectives</Meta>
-          <span>
-            1. Identify the origins of essay writing; 2. Articulate key reasons
-            to write an essay; 3. Find intrinsic motivation to write an essay of
-            one&apso;s own.
-          </span>
+          <span>1.</span>
         </ListItem>
         <ListItem>
-          <Meta>Assessment Strategy</Meta>
+          <Meta>Learning Strategy</Meta>
           <span>
-            The video first appeared with a capstone course that included a
-            summative assessment in the form of an essay. Earlier formative
-            assessments occurred throughout and included analytics the confirmed
-            having watched and responded to the video.
+            The video seeks to help viewers 1) identify the origins of essay
+            writing; 2) Articulate key benefits of writing essays; and 3) Find
+            intrinsic motivation to write an essay of one&apos;s own. It first
+            appeared with a capstone course that included a summative assessment
+            in the form of an essay. Earlier formative assessments occurred
+            throughout the course and included analytics that confirmed having
+            watched and commented on ideas from the video.
           </span>
         </ListItem>
         <ListItem>
           <Meta>Creative Tools</Meta>
-          <span>Adobe AfterEffects, Adobe PhotoShop, Adobe Premiere Pro</span>
+          <span>
+            Adobe AfterEffects, Adobe Audition, Adobe PhotoShop, Adobe Premiere
+            Pro
+          </span>
         </ListItem>
       </List>
     </Container>
