@@ -25,10 +25,6 @@ const FiveReasons = () => (
           <span>A short video to inspire writing during stressful times.</span>
         </ListItem>
         <ListItem>
-          <Meta>Learning Objectives</Meta>
-          <span>1.</span>
-        </ListItem>
-        <ListItem>
           <Meta>Learning Strategy</Meta>
           <span>
             The video seeks to help viewers 1) identify the origins of essay
