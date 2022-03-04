@@ -59,12 +59,6 @@ const Portfolio = () => {
               thumbnail={fiveReasons}
             ></WorkGridItem>
           </Section>
-          <Section delay={0.4}>
-            <Divider my={6} />
-            <Heading as="h3" fontSize={20} mb={10} mt={100}>
-              Other Works
-            </Heading>
-          </Section>
         </SimpleGrid>
       </Container>
     </Layout>

@@ -65,7 +65,8 @@ const Writing = () => (
         </SimpleGrid>
       </Section>
       <Section>
-        <Heading as="h2" variant="page-title">
+        <Heading as="h3" fontSize={20} mb={4}>
+          <Divider my={6} />
           Books
         </Heading>
       </Section>
