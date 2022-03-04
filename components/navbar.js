@@ -69,9 +69,6 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/articles" path={path}>
-            Articles
-          </LinkItem>{" "}
           <LinkItem href="/bio" path={path}>
             Bio
           </LinkItem>{" "}
@@ -80,7 +77,10 @@ const Navbar = (props) => {
           </LinkItem>
           <LinkItem href="/portfolio" path={path}>
             Portfolio
-          </LinkItem>
+          </LinkItem>{" "}
+          <LinkItem href="/writing" path={path}>
+            Writing
+          </LinkItem>{" "}
           <LinkItem
             _target="_blank"
             href="https://github.com/richardsonchrisj/"
@@ -108,9 +108,6 @@ const Navbar = (props) => {
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href="/articles" passHref>
-                  <MenuItem as={Link}>Articles</MenuItem>
-                </NextLink>{" "}
                 <NextLink href="/bio" passHref>
                   <MenuItem as={Link}>Bio</MenuItem>
                 </NextLink>
@@ -119,6 +116,9 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="/portfolio" passHref>
                   <MenuItem as={Link}>Portfolio</MenuItem>
+                </NextLink>
+                <NextLink href="/writing" passHref>
+                  <MenuItem as={Link}>Writing</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/richardsonchrisj">
                   View Source
