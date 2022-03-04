@@ -26,7 +26,7 @@ const Writing = () => (
     <Container maxW="container.lg">
       <Section>
         <Heading as="h2" variant="page-title">
-          Articles
+          Writing
         </Heading>
       </Section>
 
