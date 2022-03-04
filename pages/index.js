@@ -28,7 +28,7 @@ const Home = () => {
           <Paragraph>
             Hi, I&apos;m Chris. I&apos;m an award-winning instructional designer
             with more than a decade of professional experience. I bring clarity
-            to complexity through meaningful learning experiences. I&apos;m
+            to complexity through meaningful learning design. I&apos;m
             passionate about cutting-edge technologies and digital innovation in
             education. I&apos;ve created many online, hybrid, and in-person
             courses that promote engagement and retention. They&apos;re also
