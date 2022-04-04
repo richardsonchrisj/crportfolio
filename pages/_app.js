@@ -19,6 +19,7 @@ function Website({ Component, pageProps }) {
   return (
     <>
       <Script
+        id="gtm"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
