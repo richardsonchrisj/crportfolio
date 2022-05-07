@@ -28,39 +28,43 @@ const Bio = () => {
           </BioSection>
           <BioSection>
             <BioYear>2007</BioYear>
-            Completed Bachelor of Journalism, Ryerson University
+            Bachelor of Journalism, Ryerson University
           </BioSection>
           <BioSection>
             <BioYear>2008</BioYear>
-            Completed Master of Arts, Brock University
+            Master of Arts in Popular Culture, Brock University
           </BioSection>
           <BioSection>
             <BioYear>2012</BioYear>
-            Completed PhD, Western University
+            PhD in Media Studies, Western University
           </BioSection>
           <BioSection>
             <BioYear>2012</BioYear>
-            Hired as Assistant Professor, Young Harris College
+            Assistant Professor, Young Harris College
           </BioSection>
           <BioSection>
             <BioYear>2015</BioYear>
-            Promoted to Department Chair, Young Harris College
+            Department Chair, Young Harris College
           </BioSection>
           <BioSection>
             <BioYear>2019</BioYear>
-            Promoted to Associate Professor, Young Harris College
+            Associate Professor, Young Harris College
           </BioSection>
           <BioSection>
             <BioYear>2021</BioYear>
-            Hired as Senior Instructional Designer, Pragmatic Institute
+            Senior Instructional Designer, Pragmatic Institute
           </BioSection>
           <BioSection>
             <BioYear>2021</BioYear>
-            Completed Google Data Analytics Certificate
+            Google Data Analytics Certificate
           </BioSection>
           <BioSection>
             <BioYear>2021</BioYear>
-            Completed Professional Certificate in Coding, MIT
+            Professional Certificate in Coding, MIT
+          </BioSection>
+          <BioSection>
+            <BioYear>2022</BioYear>
+            Instructional Designer, Thorn
           </BioSection>
         </Section>
       </Container>
