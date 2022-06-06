@@ -11,7 +11,7 @@ const Work = () => (
 
       <List ml={4} my={4}>
         {" "}
-        <Link href="/portfolio/threequestions/index.html" target="_blank">
+        <Link href="/quizzes/threequestions/index.html" target="_blank">
           <WorkImage
             src="../../images/works/threeQuestions.png"
             alt="Click to Start"
