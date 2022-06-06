@@ -28,7 +28,7 @@ const Bio = () => {
           </BioSection>
           <BioSection>
             <BioYear>2007</BioYear>
-            Bachelor of Journalism, Ryerson University
+            Bachelor of Journalism, Toronto Metropolitan University
           </BioSection>
           <BioSection>
             <BioYear>2008</BioYear>
