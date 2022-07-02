@@ -4,7 +4,7 @@
 
 ## Resources
 
-I started this site by following Takuya's excellent [YouTube Tutorial]((https://www.youtube.com/watch?v=bSMZgXzC9AA), where he creates his [his own homepage](https://www.craftz.dog/)
+I started this site by following Takuya's excellent [YouTube Tutorial](https://www.youtube.com/watch?v=bSMZgXzC9AA), where he creates his [his own homepage](https://www.craftz.dog/)
 
 ## Stack
 
@@ -16,10 +16,5 @@ I started this site by following Takuya's excellent [YouTube Tutorial]((https://
 ## License
 
 CC-BY-4.0 License.
-
-You can create your own homepage for free without notifying me by forking this project under the following conditions:
-
-- Add a link to [my homepage](https://www.craftz.dog/)
-- Do not use the 3d voxel dog
 
 ---
