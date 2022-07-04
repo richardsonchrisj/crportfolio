@@ -6,13 +6,13 @@ import {
   Center,
   Text,
   Link,
-} from "@chakra-ui/react"
-import Layout from "../components/layouts/article"
-import Section from "../components/section"
-import { GridItem } from "../components/grid-item"
+} from "@chakra-ui/react";
+import Layout from "../components/layouts/article";
+import Section from "../components/section";
+import { GridItem } from "../components/grid-item";
 
-import datachats from "../public/images/podcasts/datachats.jpg"
-import tinap from "../public/images/podcasts/tinap.jpg"
+import datachats from "../public/images/podcasts/datachats.jpg";
+import tinap from "../public/images/podcasts/tinap.jpg";
 
 const Podcasts = () => (
   <Layout title="Posts">
@@ -68,23 +68,23 @@ const Podcasts = () => (
           <GridItem
             title="Heather Ann Thompson discusses her Pulitzer Prize-winning book Blood in the Water: The Attica Prison Uprising of 1971 and its Legacy "
             thumbnail={tinap}
-            href="https://www.tinapp.org/episodes/bloodinthewater"
+            href="https://anchor.fm/tinapp/episodes/Heather-Ann-Thompson-Blood-in-the-Water-e1kp4re"
           />
           <GridItem
             title="Scott Newstok discusses his book How to Think Like Shakespeare: Lessons from A Renaissance Education "
             thumbnail={tinap}
-            href="https://www.tinapp.org/episodes/howtothink"
+            href="https://anchor.fm/tinapp/episodes/Scott-Newstok-How-to-think-like-Shakespeare-e1ko865"
           />
 
           <GridItem
             title="Arthur I. Miller discusses his book The Artist in the Machine: The World of AI-Powered Creativity"
             thumbnail={tinap}
-            href="https://www.tinapp.org/episodes/artistinthemachine"
+            href="https://anchor.fm/tinapp/episodes/Arthur-I-Miller-The-Artist-in-the-Machine-e1kp4uu"
           />
 
           <Center>
             <Text fontSize="4xl">
-              <Link href="https://tinapp.org" isExternal variant={"more"}>
+              <Link href="https://anchor.fm/tinapp" isExternal variant={"more"}>
                 See More
               </Link>
             </Text>
@@ -93,7 +93,7 @@ const Podcasts = () => (
       </Section>
     </Container>
   </Layout>
-)
+);
 
-export default Podcasts
-export { getServerSideProps } from "../components/chakra"
+export default Podcasts;
+export { getServerSideProps } from "../components/chakra";
